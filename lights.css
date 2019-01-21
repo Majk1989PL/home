@@ -1,4 +1,12 @@
 body {
     font-size: 16px;
     margin: 0;
+    background: white;
+    animation: opening 1s ease-in forwards;
+}
+
+@keyframes opening {
+    to {
+        background: #443377;
+    }
 }
