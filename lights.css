@@ -10,3 +10,19 @@ body {
         background: #443377;
     }
 }
+
+#intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#intro svg {
+    max-height: 50vh;
+}
+
+#intro svg circle {
+    stroke: #DD77FF;
+    fill: none;
+}
