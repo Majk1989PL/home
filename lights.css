@@ -49,9 +49,14 @@ body {
     }
 }
 
-#intro svg g.outer.symbols {
-    animation: spin 8s ease-in-out forwards;
+#intro svg g.outer.symbol,
+#intro svg g.outer.symbol g {
     transform-origin: center center;
+    animation: spin 8s ease-in-out forwards;
+}
+
+#intro svg g.outer.symbol g {
+    animation-direction: reverse;
 }
 
 @keyframes spin {
