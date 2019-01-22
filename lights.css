@@ -42,6 +42,7 @@ body {
 #intro svg text {
     fill: #DD77FF;
     text-anchor: middle;
+    font-family: "PT Serif";
 }
 
 @keyframes dash {
