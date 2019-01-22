@@ -28,3 +28,8 @@ body {
     stroke: #DD77FF;
     fill: none;
 }
+
+#intro svg #symbols-bg-mask circle {
+    stroke-width: 0;
+    fill: black;
+}
