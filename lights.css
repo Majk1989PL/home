@@ -22,6 +22,7 @@ body {
     max-height: 50vh;
 }
 
+#intro svg line,
 #intro svg circle,
 #intro svg polygon {
     stroke: #DD77FF;
