@@ -1,3 +1,2 @@
 function action() {
-    alert("Action!");
 }
