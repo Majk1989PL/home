@@ -36,8 +36,8 @@ polygon n r = Just $ Polygon $ p <$> (α *) <$> [1.0..n']
     n'   =  fromIntegral n
 
 
-hexagon :: Float -> Maybe Polygon
-hexagon = polygon 6
+triangle = polygon 3
+hexagon  = polygon 6
 
 
 moveTo :: Point -> Polygon -> Polygon
