@@ -1,8 +1,8 @@
 body {
     font-size: 16px;
     margin: 0;
-    background: white;
-    animation: opening 1s ease-in forwards;
+    background: #CCEEFF;
+    animation: opening 2.5s ease-in forwards;
 }
 
 @keyframes opening {
@@ -19,7 +19,8 @@ body {
 }
 
 #intro svg {
-    max-height: 50vh;
+    max-height: 44vh;
+    max-width: 66vw;
 }
 
 #intro svg line,
@@ -29,12 +30,12 @@ body {
     fill: none;
     stroke-dasharray: 2000;
     stroke-dashoffset: 2000;
-    animation: dash ease-in-out forwards;
-    animation-duration: 8.5s;
+    animation: dash 8s ease-in-out 1.5s forwards;
 }
 
 #intro svg #symbols-bg-mask circle {
     stroke-width: 0;
+    animation: none;
     fill: black;
 }
 
@@ -49,15 +50,32 @@ body {
     }
 }
 
+#intro svg #lines {
+    opacity: 0;
+    animation: lines-appear 8.5s ease-in-out 1s forwards;
+}
+
+@keyframes lines-appear {
+    to {
+        opacity: 1;
+    }
+}
+
 #intro svg g.outer.symbol,
 #intro svg g.outer.symbol g {
     transform-origin: center center;
-    animation: spin 8s ease-in-out forwards;
+    animation: spin 8s ease-in-out 1s forwards;
 }
 
 #intro svg g.outer.symbol g {
     animation-direction: reverse;
+    opacity: .4;
 }
+
+#intro svg g.symbol text {
+    animation: symbol-appear 3s ease-in forwards;
+}
+
 
 @keyframes spin {
     0% {
@@ -65,5 +83,14 @@ body {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes symbol-appear {
+    0% {
+        fill: #CCEEFF;
+    }
+    100% {
+        fill: #EEAAFF;
     }
 }
