@@ -48,3 +48,17 @@ body {
         stroke-dashoffset: 0;
     }
 }
+
+#intro svg g.outer.symbols {
+    animation: spin 8s ease-in-out forwards;
+    transform-origin: center center;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
