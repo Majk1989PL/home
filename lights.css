@@ -33,3 +33,8 @@ body {
     stroke-width: 0;
     fill: black;
 }
+
+#intro svg text {
+    fill: #DD77FF;
+    text-anchor: middle;
+}
