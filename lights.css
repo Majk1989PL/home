@@ -19,8 +19,26 @@ body {
 }
 
 #intro svg {
-    max-height: 44vh;
-    max-width: 66vw;
+    max-height: 54vh;
+    max-width: 72vw;
+}
+
+#intro svg #whole-emblem {
+    animation: emblem-zoom 8s ease-in-out .5s forwards;
+    transform-origin: center center;
+    transform: scale(.7);
+}
+
+#intro svg .outer.circle {
+    animation: emblem-zoom 8s ease-in-out .5s forwards;
+    transform-origin: center center;
+    transform: scale(1.6);
+}
+
+@keyframes emblem-zoom {
+    to {
+        transform: scale(1);
+    }
 }
 
 #intro svg line,
@@ -62,14 +80,15 @@ body {
     }
 }
 
-#intro svg g.outer.symbol,
-#intro svg g.outer.symbol g {
-    transform-origin: center center;
-    animation: spin 8s ease-in-out 1s forwards;
+#intro svg g.outer.symbol {
+    transform-origin: 320px 320px;
+    animation: zoom-spin 8s ease-in-out 1s forwards;
+    transform: rotate(0) scale(1.25);
 }
 
 #intro svg g.outer.symbol g {
-    animation-direction: reverse;
+    transform-origin: 320px 320px;
+    animation: spin 8s ease-in-out 1s forwards reverse;
     opacity: .4;
 }
 
@@ -77,13 +96,19 @@ body {
     animation: symbol-appear 3s ease-in forwards;
 }
 
-
 @keyframes spin {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
+    to {
         transform: rotate(360deg);
+    }
+}
+
+
+@keyframes zoom-spin {
+    from {
+        transform: rotate(0) scale(1.25);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
     }
 }
 
