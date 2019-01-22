@@ -1,0 +1,122 @@
+body {
+    font-size: 16px;
+    margin: 0;
+    background: #CCEEFF;
+    animation: opening 2.5s ease-in forwards;
+}
+
+@keyframes opening {
+    to {
+        background: #443377;
+    }
+}
+
+#intro {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#intro svg {
+    max-height: 54vh;
+    max-width: 72vw;
+}
+
+#intro svg #whole-emblem {
+    animation: emblem-zoom 8s ease-in-out .5s forwards;
+    transform-origin: center center;
+    transform: scale(.7);
+}
+
+#intro svg .outer.circle {
+    animation: emblem-zoom 8s ease-in-out .5s forwards;
+    transform-origin: center center;
+    transform: scale(1.6);
+}
+
+@keyframes emblem-zoom {
+    to {
+        transform: scale(1);
+    }
+}
+
+#intro svg line,
+#intro svg circle,
+#intro svg polygon {
+    stroke: #DD77FF;
+    fill: none;
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 8s ease-in-out 1.5s forwards;
+}
+
+#intro svg #symbols-bg-mask circle {
+    stroke-width: 0;
+    animation: none;
+    fill: black;
+}
+
+#intro svg text {
+    fill: #DD77FF;
+    text-anchor: middle;
+    font-family: "PT Serif";
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#intro svg #lines {
+    opacity: 0;
+    animation: lines-appear 8.5s ease-in-out 1s forwards;
+}
+
+@keyframes lines-appear {
+    to {
+        opacity: 1;
+    }
+}
+
+#intro svg g.outer.symbol {
+    transform-origin: 320px 320px;
+    animation: zoom-spin 8s ease-in-out 1s forwards;
+    transform: rotate(0) scale(1.25);
+}
+
+#intro svg g.outer.symbol g {
+    transform-origin: 320px 320px;
+    animation: spin 8s ease-in-out 1s forwards reverse;
+    opacity: .4;
+}
+
+#intro svg g.symbol text {
+    animation: symbol-appear 3s ease-in forwards;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes zoom-spin {
+    from {
+        transform: rotate(0) scale(1.25);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+@keyframes symbol-appear {
+    0% {
+        fill: #CCEEFF;
+    }
+    100% {
+        fill: #EEAAFF;
+    }
+}
